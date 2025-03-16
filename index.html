@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Intro to the Basics Vocabulary</title>
+</head>
+<body style="background-color: rgb(19, 150, 197);">
+    <br>
+    <center>
+    <div class="Main-Div">
+        <center>
+            <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Put the vocabulary word in the text box that is described the most by the definition<h4>use lowercase</h4></h1>
+            <br><br>
+            <h1 id="definition" onclick="start()">Click here to start!</h1>
+            <br><br>
+            <div style="width: 50%;">
+            <input class="form-control" id="text-box">
+            </div>
+            <br>
+            <button class="btn btn-success" onclick="submit()">Submit!</button>
+            <br><br>
+        </center>
+    </div>
+    </center>
+    <script>
+        random = Math.floor(Math.random() * 19);
+        function start()
+        {
+            if(random == 0)
+        {
+            document.getElementById("definition").innerHTML = "Physical components of the computer; examples include monitor, keyboard, mouse, printer";
+            ans = "hardware";
+        }
+        if(random == 1)
+        {
+            document.getElementById("definition").innerHTML = "Peripheral (hardware device) that sends data to a computer, allowing you to interact with and control it; two most common types are keyboard and mouse";
+            ans = "input device";
+        }
+        if(random == 2)
+        {
+            document.getElementById("definition").innerHTML = "Peripheral (hardware device) that allows you to get the results from the computer; common types are monitor, printer, projection unit, headphones, speakers";
+            ans = "output device";
+        }
+        if(random == 3)
+        {
+            document.getElementById("definition").innerHTML = "“Brain” of the computer; processor inside computer";
+            ans = "cpu";
+        }
+        if(random == 4)
+        {
+            document.getElementById("definition").innerHTML = "Set of machine-readable instructions that direct a computer’s processor to perform specific operations";
+            ans = "software";
+        }
+        if(random == 5)
+        {
+            document.getElementById("definition").innerHTML = "Computer software that provides for input, editing, formatting, and output of text; usedto create basic text documents like memos, letters, reports, agendas, newsletters, etc.; most common types are Microsoft Word and Google Docs";
+            ans = "word processing software";
+        }
+        if(random == 6)
+        {
+            document.getElementById("definition").innerHTML = "Free web-based word processing application in which documents can be created, edited, shared, and stored online; files can be accessed from any computer with an internet connection and a web browser";
+            ans = "google docs";
+        }
+        if(random == 7)
+        {
+            document.getElementById("definition").innerHTML = "Type of software that allows you to find and view websites on the Internet; most common ones include Google Chrome, Safari, Microsoft Edge, and Mozilla Firefox";
+            ans = "web browser";
+        }
+        if(random == 8)
+        {
+            document.getElementById("definition").innerHTML = "Manages the computer's memory and processes, as well as all of its software and hardware. It also allows you to communicate with the computer without knowing how to speak the computer's language. Without an operating system, a computer is useless.";
+            ans = "operating system";
+        }
+        if(random == 9)
+        {
+            document.getElementById("definition").innerHTML = "The main screen & workspace that opens when Windows operating system is started";
+            ans = "desktop";
+        }
+        if(random == 10)
+        {
+            document.getElementById("definition").innerHTML = "A small graphic image that represents a software program, file, or specific command";
+            ans = "icon";
+        }
+        if(random == 11)
+        {
+            document.getElementById("definition").innerHTML = "The standard (pre-set) settings that are in effect unless you change them";
+            ans = "default";
+        }
+        if(random == 12)
+        {
+            document.getElementById("definition").innerHTML = "Menu that appears when you right-click something in the program window; contains a list of commands you are most likely to use with the item or text you right-clicked";
+            ans = "shortcut menu";
+        }
+        if(random == 13)
+        {
+            document.getElementById("definition").innerHTML = "The white space or area from the edge of the paper to the text";
+            ans = "margin";
+        }
+        if(random == 14)
+        {
+            document.getElementById("definition").innerHTML = "Software feature to change the vertical or horizontal position of text such as left, center, or right";
+            ans = "alignment";
+        }
+        if(random == 15)
+        {
+            document.getElementById("definition").innerHTML = "Automatic wrapping of text from the end of one line to the beginning of the next line (using soft returns where Line and Paragraph Spacing options can be applied)";
+            ans = "word wrap";
+        }
+        if(random == 16)
+        {
+            document.getElementById("definition").innerHTML = "When the computer operator presses the Enter key to end a line of text; used to create SS = 1 hard return, DS = 2 hard returns; TS = 3 hard returns, QS = 4 hard returns";
+            ans = "hard return";
+        }
+        if(random == 17)
+        {
+            document.getElementById("definition").innerHTML = "To READ, look over, and correct (edit) a piece of work by finding errors (watching out for spelling mistakes, grammar problems, and formatting mistakes)";
+            ans = "proofread";
+        }
+        if(random == 18)
+        {
+            document.getElementById("definition").innerHTML = "Keyboard key that deletes any character before (to the left) the cursor's current position";
+            ans = "backspace key";
+        }
+        if(random == 19)
+        {
+            document.getElementById("definition").innerHTML = "Keyboard key that deletes any character after (to the right) the cursor's current position";
+            ans = "delete key";
+        }
+        }
+        
+        async function submit()
+        {
+            const delay = (ms) => new Promise(res => setTimeout(res, ms));
+            text = document.getElementById("text-box").value;
+            if(text == ans)
+        {
+            document.getElementById("definition").innerHTML = "Correct!"
+            await delay(2000);
+            location.reload();            
+        }
+        else
+        {
+            document.getElementById("text-box").value = "Incorrect!"
+        }
+        }
+    </script>
+    <style>
+        .Main-Div
+        {
+            background-color: white;
+            border-radius: 25px;
+            width: 60%;
+        }
+    </style>
+</body> 
+</html>
